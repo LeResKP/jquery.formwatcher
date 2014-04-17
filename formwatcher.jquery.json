@@ -1,0 +1,26 @@
+{
+  "name": "formwatcher",
+  "title": "Formwatcher",
+  "description": "The best jQuery plugin ever.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/LeResKP/jquery.formwatcher",
+  "author": {
+    "name": "Aurélien Matouillot",
+    "email": "a.matouillot@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/LeResKP/jquery.formwatcher.git"
+  },
+  "bugs": "https://github.com/LeResKP/jquery.formwatcher/issues",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/LeResKP/jquery.formwatcher/blob/master/LICENSE-MIT"
+    }
+  ],
+  "dependencies": {
+    "jquery": "*"
+  },
+  "keywords": []
+}
