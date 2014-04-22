@@ -104,7 +104,7 @@
     });
 
     test('checkChange', function() {
-        expect(15);
+        expect(19);
         var form = $('#form');
         var fw = new FormWatcher(form);
 
@@ -127,6 +127,7 @@
         strictEqual(clean_cnt, 0);
         strictEqual(fw.$updatedElements.length, 1);
         strictEqual(fw.$updatedElements[0], 1);
+        strictEqual(fw.status, 'dirty');
 
         // The form is already dirty
         $radio1.trigger('change');
@@ -134,12 +135,14 @@
         strictEqual(clean_cnt, 0);
         strictEqual(fw.$updatedElements.length, 1);
         strictEqual(fw.$updatedElements[0], 1);
+        strictEqual(fw.status, 'dirty');
 
         $radio1.prop('checked', false);
         $radio1.trigger('change');
         strictEqual(dirty_cnt, 1);
         strictEqual(clean_cnt, 1);
         strictEqual(fw.$updatedElements.length, 0);
+        strictEqual(fw.status, 'clean');
 
         $checkbox1.prop('checked', true);
         $checkbox1.trigger('change');
@@ -147,6 +150,7 @@
         strictEqual(clean_cnt, 1);
         strictEqual(fw.$updatedElements.length, 1);
         strictEqual(fw.$updatedElements[0], 2);
+        strictEqual(fw.status, 'dirty');
     });
 
     test('plugin', function() {

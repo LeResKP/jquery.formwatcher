@@ -9,6 +9,9 @@
 (function($) {
     "use strict";
 
+    var STATUS_DIRTY = 'dirty',
+        STATUS_CLEAN = 'clean';
+
     var FormWatcher = function(element) {
         this.init(element);
     };
@@ -19,6 +22,7 @@
         this.$element = $(element);
         this.$inputs = $(element).find(':input');
         this.$updatedElements = [];
+        this.status = STATUS_CLEAN;
 
         var that = this;
         this.$inputs.each(function() {
@@ -47,6 +51,7 @@
             if(this.$updatedElements.indexOf(id) === -1 ) {
                 this.$updatedElements.push(id);
                 this.$element.trigger('dirty.formwatcher');
+                this.status = STATUS_DIRTY;
             }
         }
         else {
@@ -55,6 +60,7 @@
                 this.$updatedElements.pop(index);
                 if(this.$updatedElements.length === 0) {
                     this.$element.trigger('clean.formwatcher');
+                    this.status = STATUS_CLEAN;
                 }
             }
         }
