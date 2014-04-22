@@ -1,7 +1,7 @@
 {
   "name": "formwatcher",
-  "title": "Formwatcher",
-  "description": "The best jQuery plugin ever.",
+  "title": "jQuery Form Watcher",
+  "description": "jQuery plugin to watch the form field’s.",
   "version": "0.1.0",
   "homepage": "https://github.com/LeResKP/jquery.formwatcher",
   "author": {
