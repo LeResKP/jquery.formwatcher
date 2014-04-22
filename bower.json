@@ -1,0 +1,23 @@
+{
+  "name": "jquery.formwatcher",
+  "version": "0.1.1",
+  "homepage": "https://github.com/LeResKP/jquery.formwatcher",
+  "authors": [
+    "Aurélien Matouillot <a.matouillot@gmail.com>"
+  ],
+  "description": "jQuery plugin to watch the form field’s.",
+  "main": "dist/jquery.formwatcher.js",
+  "keywords": [
+    "jquery",
+    "form",
+    "watch"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
