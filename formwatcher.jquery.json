@@ -4,6 +4,7 @@
   "description": "jQuery plugin to watch the form field’s.",
   "version": "0.1.0",
   "homepage": "https://github.com/LeResKP/jquery.formwatcher",
+  "demo": "http://lereskp.github.io/jquery.formwatcher/",
   "author": {
     "name": "Aurélien Matouillot",
     "email": "a.matouillot@gmail.com"
