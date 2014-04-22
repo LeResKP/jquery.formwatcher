@@ -2,7 +2,7 @@
   "name": "formwatcher",
   "title": "jQuery Form Watcher",
   "description": "jQuery plugin to watch the form field’s.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/LeResKP/jquery.formwatcher",
   "demo": "http://lereskp.github.io/jquery.formwatcher/",
   "docs": "http://jquery-form-watcher.rtfd.org/",

@@ -1,4 +1,4 @@
-/*! jQuery Form Watcher - v0.1.0 - 2014-04-22
+/*! jQuery Form Watcher - v0.1.1 - 2014-04-22
 * https://github.com/LeResKP/jquery.formwatcher
 * Copyright (c) 2014 Aurélien Matouillot; Licensed MIT */
 (function($) {
