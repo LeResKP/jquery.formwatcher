@@ -18,6 +18,17 @@
     "node_modules",
     "bower_components",
     "test",
+    "CONTRIBUTING.md",
+    "docs",
+    "formwatcher.jquery.json",
+    "Gruntfile.js",
+    "libs",
+    "package.json",
+    "README.md",
+    "LICENSE-MIT",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "jquery": ">= 1.9.0"
+  }
 }
