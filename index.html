@@ -1,1 +1,32 @@
-My GitHub Page
+<html>
+  <head>
+    <title>jQuery Form Watcher demo</title>
+    <script type="text/javascript" src="libs/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="dist/jquery.formwatcher.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('#myform').formwatcher().on('dirty.formwatcher', function() {
+            alert('The form is dirty');
+        }).on('clean.formwatcher', function() {
+            alert('The form is clean');
+        }).on('submit', function(e) {
+          if ($(this).data('formwatcher').status !== 'dirty') {
+              // No update on the form
+              e.preventDefault();
+              alert('Don\'t submit the form, nothing has changed!');
+          }
+          else {
+            alert('Submitting the form');
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+
+    <form id="myform">
+      <label for="name">Name</label><input type="text" id="name" />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
