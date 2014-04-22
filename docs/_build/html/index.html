@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>jQuery Form Watcher &mdash; jQuery Form Watcher 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="jQuery Form Watcher 0.1 documentation" href="#" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li><a href="#">jQuery Form Watcher 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="jquery-form-watcher">
+<h1>jQuery Form Watcher<a class="headerlink" href="#jquery-form-watcher" title="Permalink to this headline">¶</a></h1>
+<p>jQuery plugin to watch the form field’s. When a field is updated it trigger an event on the form.</p>
+<p>This plugin can be usefull when you want to submit the form in ajax, you only call the submit function if some updates have been made. Also it can be use when you have an autosave system of your form.</p>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>Include the javascript</p>
+<div class="code highlight-python"><div class="highlight"><pre>&lt;script type=&quot;text/javascript&quot; src=&quot;jquery.formwatcher.js&quot;&gt;&lt;/script&gt;
+</pre></div>
+</div>
+<p>Call the plugin</p>
+<div class="code highlight-python"><div class="highlight"><pre>$(&#39;form-selector&#39;).formwatcher();
+</pre></div>
+</div>
+<p>Example of usage for the HTML bellow</p>
+<div class="code highlight-python"><div class="highlight"><pre>&lt;form id=&quot;myform&quot;&gt;
+    &lt;input type=&quot;text&quot; value=&quot;&quot; /&gt;
+&lt;/form&gt;
+</pre></div>
+</div>
+<div class="code highlight-python"><div class="highlight"><pre>$(&#39;#myform&#39;).formwatcher().on(&#39;dirty.formwatcher&#39;, function() {
+    alert(&#39;The form is dirty&#39;);
+}).on(&#39;clean.formwatcher&#39;, function() {
+    alert(&#39;The form is clean&#39;);
+});
+</pre></div>
+</div>
+<p>So when you update the input it will trigger the event dirty.formwatcher. If you reput the initial value, the event clean.formwatcher is triggered.</p>
+<p>If you want to check there are some updates before submitting</p>
+<div class="code highlight-python"><div class="highlight"><pre>$(&#39;#myform&#39;).formwatcher().on(&#39;submit&#39;, function(e) {
+    if ($(this).data(&#39;formwatcher&#39;).status !== &#39;dirty&#39;) {
+        // No update on the form
+        e.preventDefault();
+    }
+});
+</pre></div>
+</div>
+<p><a class="reference external" href="http://lereskp.github.io/jquery.formwatcher/">See the full demo</a></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">jQuery Form Watcher</a><ul>
+<li><a class="reference internal" href="#usage">Usage</a></li>
+</ul>
+</li>
+</ul>
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/index.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li><a href="#">jQuery Form Watcher 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Aurélien Matouillot.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>
