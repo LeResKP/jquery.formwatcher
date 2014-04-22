@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "homepage": "https://github.com/LeResKP/jquery.formwatcher",
   "demo": "http://lereskp.github.io/jquery.formwatcher/",
+  "docs": "http://jquery-form-watcher.rtfd.org/",
   "author": {
     "name": "Aurélien Matouillot",
     "email": "a.matouillot@gmail.com"
@@ -23,5 +24,5 @@
   "dependencies": {
     "jquery": "*"
   },
-  "keywords": []
+  "keywords": ["jquery", "form", "watch"]
 }
