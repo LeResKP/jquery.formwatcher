@@ -18,6 +18,7 @@ Include the javascript
 
 .. code::
 
+    <script type="text/javascript" src="jquery.js"></script>
     <script type="text/javascript" src="jquery.formwatcher.js"></script>
 
 
