@@ -6,6 +6,7 @@
   "homepage": "https://github.com/LeResKP/jquery.formwatcher",
   "demo": "http://lereskp.github.io/jquery.formwatcher/",
   "docs": "http://jquery-form-watcher.rtfd.org/",
+  "download": "https://github.com/LeResKP/jquery.formwatcher/releases/download/0.1.1/jquery.formwatcher-0.1.1.zip",
   "author": {
     "name": "Aurélien Matouillot",
     "email": "a.matouillot@gmail.com"
